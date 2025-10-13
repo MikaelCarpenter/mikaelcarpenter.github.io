@@ -1,0 +1,33 @@
+@media (prefers-color-scheme: light) {
+  :root {
+    --text: #3d352e;
+    --background: #ece7e4;
+    --primary: #4b6043;
+    --secondary: #d3c7bb;
+    --accent: #a2aea4;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #d1c9c2;
+    --background: #1b1613;
+    --primary: #a7bc9f;
+    --secondary: #44382c;
+    --accent: #515d53;
+  }
+}
+
+html {
+  font-size: 112.5%;
+  background-color: var(--background);
+}
+
+body {
+  display: flow-root;
+  color: var(--text);
+  margin: 0px 16px 64px 16px;
+}
+
+a {
+  color: var(--primary);
+}
