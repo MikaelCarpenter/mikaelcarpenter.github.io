@@ -25,9 +25,25 @@ html {
 body {
   display: flow-root;
   color: var(--text);
-  margin: 0px 16px 64px 16px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto 64px auto;
+  padding: 0 4vw;
 }
 
 a {
   color: var(--primary);
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 0 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    max-width: 75ch;
+    padding: 0;
+  }
 }
