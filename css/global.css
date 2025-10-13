@@ -66,5 +66,6 @@ pre code {
   body {
     max-width: 75ch;
     padding: 0;
+    margin-bottom: 50vh;
   }
 }
