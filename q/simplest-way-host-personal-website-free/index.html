@@ -449,11 +449,14 @@ pre code {
               <details>
                 <summary>Purchase a domain name</summary>
                 <p>
-                  To do this, you'll want to visit a domain name registrar. I
-                  recommend
-                  <external-link href="https://domains.cloudflare.com/"
-                    >Cloudflare</external-link
-                  >, as an industry leader in various web services.
+                  To do this, you'll want to visit a
+                  <external-link
+                    href="https://www.cloudflare.com/learning/dns/glossary/what-is-a-domain-name-registrar/"
+                    >domain name registrar</external-link
+                  >. I recommend
+                  <external-link href="https://vercel.com/domains"
+                    >Vercel</external-link
+                  >, for ease of use.
                 </p>
               </details>
             </li>
@@ -466,8 +469,46 @@ pre code {
                 <p>
                   Most registrars provide DNS hosting services, allowing you to
                   manage your DNS records easily. The trick will be knowning
-                  which records to create.
+                  which records to create. Using Vercel helps us here, all we
+                  need to do is create an <code>ALIAS</code> record that points
+                  our
+                  <external-link
+                    href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages"
+                    >apex domain</external-link
+                  >
+                  at our Github Pages domain.
                 </p>
+                <p>ALIAS record:</p>
+                <ul>
+                  <li><strong>Name:</strong> leave this blank</li>
+                  <li><strong>Type:</strong> <code>ALIAS</code></li>
+                  <li>
+                    <strong>Value:</strong>
+                    <code>&lt;username&gt;.github.io</code>
+                  </li>
+                  <li><strong>TTL:</strong> <code>60</code> (default)</li>
+                </ul>
+                <p>
+                  We'll actually need one more <code>CNAME</code> record that
+                  points our <code>www</code> subdomain at the same IP as our
+                  apex domain. This is
+                  <external-link
+                    href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain-and-the-www-subdomain-variant"
+                    >recommended</external-link
+                  >
+                  by Github Pages and you'll run into a warning when you do the
+                  DNS check later if you don't add this.
+                </p>
+                <p>CNAME record:</p>
+                <ul>
+                  <li><strong>Name:</strong> <code>www</code></li>
+                  <li><strong>Type:</strong> <code>CNAME</code></li>
+                  <li>
+                    <strong>Value:</strong>
+                    <code>&lt;username&gt;.github.io</code>
+                  </li>
+                  <li><strong>TTL:</strong> <code>60</code> (default)</li>
+                </ul>
               </details>
             </li>
             <li>
@@ -476,6 +517,21 @@ pre code {
                   Enter your new domain in your Github repo settings and do a
                   DNS check
                 </summary>
+
+                <ol>
+                  <li>Go to your Github repo "Settings" tab</li>
+                  <li>Go to the "Pages" section of you settings</li>
+                  <li>
+                    Under "Custom domain", enter your new domain and click
+                    "Save"
+                  </li>
+                  <li>Github will do a DNS check to verify your DNS records</li>
+                </ol>
+
+                <p>
+                  Allow the DNS records to propogate (~60s). Visit your custom
+                  domain and you can now see your Github Pages website!
+                </p>
               </details>
             </li>
           </ol>
