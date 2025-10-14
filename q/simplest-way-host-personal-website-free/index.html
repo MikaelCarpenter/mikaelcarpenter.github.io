@@ -32,7 +32,7 @@
         </header>
 
         <section aria-labelledby="section-1-heading">
-          <h2 id="section-1-heading">1. The power of simplicity</h2>
+          <h2 id="section-1-heading">The power of simplicity</h2>
           <p>
             What does it <em>truly</em> take to publish on the web? Turns out,
             just a
@@ -43,8 +43,7 @@
             <external-link
               href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages"
               >Github Pages</external-link
-            >
-            You don't need a complex framework or a computer science degree.
+            >. You don't need a complex framework or a computer science degree.
             Although, you will need a basic understanding of
             <external-link
               href="https://webtuu.com/blog/04/a-laymans-introduction-to-git"
@@ -73,7 +72,7 @@
         </section>
 
         <section aria-labelledby="section-2-heading">
-          <h2 id="section-2-heading">2. Creating your Github Pages website</h2>
+          <h2 id="section-2-heading">Creating your Github Pages website</h2>
           <ol>
             <li>
               <details>
@@ -138,7 +137,7 @@
         </section>
 
         <section aria-labelledby="section-3-heading">
-          <h2 id="section-3-heading">3. A more realistic starting point</h2>
+          <h2 id="section-3-heading">A more realistic starting point</h2>
 
           <ol>
             <li>
@@ -332,7 +331,7 @@ pre code {
 
         <section aria-labelledby="section-4-heading">
           <h2 id="section-4-heading">
-            4. Testing your website on a mobile device
+            Testing your website on a mobile device
           </h2>
 
           <ol>
@@ -370,15 +369,116 @@ pre code {
               </details>
             </li>
           </ol>
+        </section>
 
-          <p>
-            Now you have your website running locally on your computer. This is
-            helpful for mobile testing, but it will also come in handy as soon
-            as you start importing any javascript. If you just look at your
-            webpage with your computer's browser via the file protocol, you will
-            encounter CORS issues. Using this http server by default is a good
-            habit to get into.
-          </p>
+        <section aria-labelledby="section-5-heading">
+          <h2 id="section-5-heading">Adding a custom font</h2>
+
+          <ol>
+            <li>
+              <details>
+                <summary>
+                  Acquire the
+                  <external-link
+                    href="https://gist.github.com/sergejmueller/cf6b4f2133bcb3e2f64a"
+                    ><code>.woff2</code></external-link
+                  >
+                  file(s) for your desired font
+                </summary>
+
+                <p>
+                  I recommend
+                  <external-link href="https://gwfh.mranftl.com/fonts"
+                    >Google Webfonts Helper</external-link
+                  >, because it gives you access to a wide selection of free
+                  Google fonts.
+                </p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Add the font file(s) to your website repo</summary>
+
+                <p>
+                  Just like with the CSS, you'll want to create a folder for
+                  <code>fonts/</code> and add your <code>.woff2</code> files
+                  directly to that folder. In my example, I'd have:
+                </p>
+                <pre><code>fonts/source-sans-3-v19-latin-regular.woff2</code></pre>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>
+                  Update your global css to include the
+                  <external-link
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face"
+                    ><code>@font-face</code></external-link
+                  >
+                </summary>
+
+                <p>
+                  If you used
+                  <external-link href="https://gwfh.mranftl.com/fonts"
+                    >Google Webfonts Helper</external-link
+                  >, then they will give you the css you need. It should like
+                  like this for each font file you'd like to add:
+                </p>
+                <pre><code>@font-face {
+  font-display: swap;
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/source-sans-3-v19-latin-regular.woff2") format("woff2");
+}</code></pre>
+                <p>
+                  And using it with some default backups (sans-serif fonts in
+                  this example):
+                </p>
+                <pre><code>font-family: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;</code></pre>
+              </details>
+            </li>
+          </ol>
+        </section>
+
+        <section aria-labelledby="section-6-heading">
+          <h2 id="section-6-heading">Using a custom domain</h2>
+
+          <ol>
+            <li>
+              <details>
+                <summary>Purchase a domain name</summary>
+                <p>
+                  To do this, you'll want to visit a domain name registrar. I
+                  recommend
+                  <external-link href="https://domains.cloudflare.com/"
+                    >Cloudflare</external-link
+                  >, as an industry leader in various web services.
+                </p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>
+                  Create the appropriate records in your DNS hosting provider
+                </summary>
+
+                <p>
+                  Most registrars provide DNS hosting services, allowing you to
+                  manage your DNS records easily. The trick will be knowning
+                  which records to create.
+                </p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>
+                  Enter your new domain in your Github repo settings and do a
+                  DNS check
+                </summary>
+              </details>
+            </li>
+          </ol>
         </section>
       </article>
     </main>
