@@ -1,0 +1,114 @@
+/* css/global.css */
+:root {
+  /* Theme colors */
+  --text: #151d2a;
+  --background: #ffffff;
+  --primary: #2563eb;
+  --secondary: #e8edf2;
+  --accent: #ddeafb;
+
+  /* Font weights */
+  --light: 300;
+  --normal: 400;
+  --medium: 500;
+  --bold: 700;
+}
+
+html {
+  background-color: var(--background);
+}
+
+body {
+  display: flow-root;
+  color: var(--text);
+  /* By default, we assume mobile screen size */
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto 64px auto;
+  padding: 0 4vw;
+}
+
+/*
+ * Typography
+ */
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  font-weight: var(--bold);
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: var(--normal);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+code {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  font-weight: var(--normal);
+  font-family: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas,
+    "Courier New", monospace;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+small {
+  font-size: 0.875rem;
+}
+
+/* 
+ * Element styles
+ */
+a {
+  color: var(--primary);
+}
+
+code {
+  background-color: var(--secondary);
+  padding: 0.046875rem 0.5rem;
+  border-radius: 4px;
+}
+
+pre {
+  background-color: var(--secondary);
+  border: 1px solid var(--accent);
+  border-radius: 12px;
+  padding: 8px 16px;
+  overflow-x: auto;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* Modifications for tablet screens */
+@media (min-width: 768px) {
+  body {
+    padding: 0 4rem;
+  }
+}
+
+/* Modifications for desktop screens */
+@media (min-width: 1024px) {
+  body {
+    max-width: 75ch;
+    padding: 0;
+  }
+}
