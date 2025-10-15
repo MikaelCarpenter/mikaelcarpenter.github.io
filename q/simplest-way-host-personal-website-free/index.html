@@ -34,7 +34,7 @@
       }
     </style>
 
-    <script type="module" src="../../js/components/external-link.js"></script>
+    <script type="module" src="../../js/global.js"></script>
   </head>
   <body>
     <main>
@@ -55,24 +55,30 @@
           <p>
             What does it <em>truly</em> take to publish on the web? Turns out,
             just a
-            <external-link href="https://GitHub.com/signup"
-              >free GitHub account</external-link
+            <a href="https://github.com/signup" class="external-link"
+              >free GitHub account</a
             >
             and
-            <external-link
-              href="https://docs.GitHub.com/en/pages/getting-started-with-GitHub-pages/what-is-GitHub-pages"
-              >GitHub Pages</external-link
+            <a
+              href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages"
+              class="external-link"
+              >GitHub Pages</a
             >. You don't need a complex framework or a computer science degree.
             Although, you will need a basic understanding of
-            <external-link
+            <a
               href="https://webtuu.com/blog/04/a-laymans-introduction-to-git"
-              >git</external-link
+              class="external-link"
+              >git</a
             >
             , for source control, and
-            <external-link href="https://www.w3schools.com/html/default.asp"
-              >html</external-link
-            >/<external-link href="https://www.w3schools.com/css/default.asp"
-              >css</external-link
+            <a
+              href="https://www.w3schools.com/html/default.asp"
+              class="external-link"
+              >html</a
+            >/<a
+              href="https://www.w3schools.com/css/default.asp"
+              class="external-link"
+              >css</a
             >, for creating your webpages.
           </p>
           <p>
@@ -83,9 +89,10 @@
             <strong><em>simple</em></strong> and
             <strong><em>powerful</em></strong> framework, from which you can
             begin to carve out your own section of the
-            <external-link
+            <a
               href="https://mangrove-web.com/blog/services/website-strategy/exploring-the-principles-of-the-open-web/"
-              >World Wide Web</external-link
+              class="external-link"
+              >World Wide Web</a
             >.
           </p>
         </section>
@@ -96,11 +103,11 @@
             <li>
               <details>
                 <summary>
-                  <external-link href="https://GitHub.com/new"
-                    >Create a GitHub repository</external-link
+                  <a href="https://github.com/new" class="external-link"
+                    >Create a GitHub repository</a
                   >
                   with the following name structure:
-                  <code>&lt;username&gt;.GitHub.io</code>
+                  <code>&lt;username&gt;.github.io</code>
                 </summary>
                 <ul>
                   <li>
@@ -109,8 +116,8 @@
                   </li>
                   <li>
                     e.g. If my username is "RedPorcupine37" and my profile url
-                    is "https://GitHub.com/RedPorcupine37". Then, my repository
-                    name is "redporcupine37.GitHub.io".
+                    is "https://github.com/RedPorcupine37". Then, my repository
+                    name is "redporcupine37.github.io".
                   </li>
                 </ul>
               </details>
@@ -144,7 +151,7 @@
           <p>
             <strong><em>Congratulations!</em></strong> You now have a live
             webpage at your GitHub Pages domain
-            (<code>&lt;username&gt;.GitHub.io</code>). You can go make any
+            (<code>&lt;username&gt;.github.io</code>). You can go make any
             changes you'd like, push them to the remote repo, and see those
             changes live in a matter of seconds.
           </p>
@@ -419,7 +426,7 @@ pre code {
                 <summary>
                   Acquire the
                   <external-link
-                    href="https://gist.GitHub.com/sergejmueller/cf6b4f2133bcb3e2f64a"
+                    href="https://gist.github.com/sergejmueller/cf6b4f2133bcb3e2f64a"
                     ><code>.woff2</code></external-link
                   >
                   file(s) for your desired font
@@ -449,16 +456,17 @@ pre code {
               <details>
                 <summary>
                   Update your global css to include the
-                  <external-link
+                  <a
                     href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face"
-                    ><code>@font-face</code></external-link
+                    class="external-link"
+                    ><code>@font-face</code></a
                   >
                 </summary>
 
                 <p>
                   If you used
-                  <external-link href="https://gwfh.mranftl.com/fonts"
-                    >Google Webfonts Helper</external-link
+                  <a href="https://gwfh.mranftl.com/fonts" class="external-link"
+                    >Google Webfonts Helper</a
                   >, then they will give you the css you need. It should like
                   like this for each font file you'd like to add:
                 </p>
@@ -510,7 +518,7 @@ pre code {
                   records to create. Using Vercel helps, as all we need to do is
                   create an <code>ALIAS</code> record that points our
                   <external-link
-                    href="https://docs.GitHub.com/en/pages/configuring-a-custom-domain-for-your-GitHub-pages-site/about-custom-domains-and-GitHub-pages"
+                    href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages"
                     >apex domain</external-link
                   >
                   at our GitHub Pages domain.
@@ -521,7 +529,7 @@ pre code {
                   <li><strong>Type:</strong> <code>ALIAS</code></li>
                   <li>
                     <strong>Value:</strong>
-                    <code>&lt;username&gt;.GitHub.io</code>
+                    <code>&lt;username&gt;.github.io</code>
                   </li>
                   <li><strong>TTL:</strong> <code>60</code> (default)</li>
                 </ul>
@@ -530,7 +538,7 @@ pre code {
                   points our <code>www</code> subdomain at the same IP as our
                   apex domain. This is
                   <external-link
-                    href="https://docs.GitHub.com/en/pages/configuring-a-custom-domain-for-your-GitHub-pages-site/managing-a-custom-domain-for-your-GitHub-pages-site#configuring-an-apex-domain-and-the-www-subdomain-variant"
+                    href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain-and-the-www-subdomain-variant"
                     >recommended</external-link
                   >
                   by GitHub Pages. If you don't add this, you'll run into a
@@ -542,7 +550,7 @@ pre code {
                   <li><strong>Type:</strong> <code>CNAME</code></li>
                   <li>
                     <strong>Value:</strong>
-                    <code>&lt;username&gt;.GitHub.io</code>
+                    <code>&lt;username&gt;.github.io</code>
                   </li>
                   <li><strong>TTL:</strong> <code>60</code> (default)</li>
                 </ul>
