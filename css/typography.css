@@ -195,12 +195,14 @@
   src: url("../fonts/source-sans-3-v19-latin-700italic.woff2") format("woff2");
 }
 
+
 :root {
   --light: 300;
   --normal: 400;
   --medium: 500;
   --bold: 700;
 }
+
 
 h1,
 h2,
@@ -228,16 +230,40 @@ code {
 
 h1 {
   font-size: 2.3526rem;
+  margin-block-start: var(--space-2xl);
+  margin-block-end: var(--space-lg);
 }
 
 h2 {
   font-size: 1.7689rem;
+  margin-block-start: var(--space-xl);
+  margin-block-end: var(--space-md);
 }
 
 h3 {
   font-size: 1.33rem;
+  margin-block-start: var(--space-lg);
+  margin-block-end: var(--space-sm);
 }
 
 small {
   font-size: 0.7518rem;
+}
+
+p,
+ul,
+ol,
+pre,
+blockquote {
+  margin-block-start: var(--space-md);
+  margin-block-end: var(--space-md);
+}
+
+li {
+  margin-block-end: var(--space-xs);
+}
+
+blockquote {
+  padding-left: var(--space-md);
+  border-left: 3px solid var(--accent);
 }

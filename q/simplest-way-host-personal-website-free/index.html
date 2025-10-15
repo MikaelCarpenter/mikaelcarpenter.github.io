@@ -17,6 +17,22 @@
 
     <link rel="stylesheet" href="../../css/global.css" />
     <link rel="stylesheet" href="../../css/typography.css" />
+    <style>
+      header {
+        border-bottom: 1px solid var(--accent);
+
+        .header-subtitle {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+
+          small {
+            margin-bottom: var(--space-md);
+          }
+        }
+      }
+    </style>
 
     <script type="module" src="../../js/components/external-link.js"></script>
   </head>
@@ -25,10 +41,13 @@
       <article>
         <header>
           <h1>What is the Simplest Way to Host a Personal Website for Free?</h1>
-          <p>
-            Author: <a href="../../index.html" rel="author">Mikael Carpenter</a>
-          </p>
-          <p>2025-10-11</p>
+          <div class="header-subtitle">
+            <small>
+              Author:
+              <a href="../../index.html" rel="author">Mikael Carpenter</a>
+            </small>
+            <small>2025-10-11</small>
+          </div>
         </header>
 
         <section aria-labelledby="section-1-heading">
@@ -343,6 +362,26 @@ pre code {
                   system. You should be looking for a value that looks like
                   <code>192.168.1.100</code>.
                 </p>
+                <ul>
+                  <li>
+                    <external-link
+                      href="https://www.geeksforgeeks.org/linux-unix/command-to-check-ip-address-in-linux/"
+                      >Linux</external-link
+                    >
+                  </li>
+                  <li>
+                    <external-link
+                      href="https://apple.stackexchange.com/questions/20547/how-do-i-find-my-ip-address-from-the-command-line"
+                      >MacOS</external-link
+                    >
+                  </li>
+                  <li>
+                    <external-link
+                      href="https://support.microsoft.com/en-us/windows/essential-network-settings-and-tasks-in-windows-f21a9bbc-c582-55cd-35e0-73431160a1b9"
+                      >Windows</external-link
+                    >
+                  </li>
+                </ul>
               </details>
             </li>
             <li>
