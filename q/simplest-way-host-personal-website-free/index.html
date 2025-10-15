@@ -55,13 +55,13 @@
           <p>
             What does it <em>truly</em> take to publish on the web? Turns out,
             just a
-            <external-link href="https://github.com/signup"
-              >free Github account</external-link
+            <external-link href="https://GitHub.com/signup"
+              >free GitHub account</external-link
             >
             and
             <external-link
-              href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages"
-              >Github Pages</external-link
+              href="https://docs.GitHub.com/en/pages/getting-started-with-GitHub-pages/what-is-GitHub-pages"
+              >GitHub Pages</external-link
             >. You don't need a complex framework or a computer science degree.
             Although, you will need a basic understanding of
             <external-link
@@ -77,7 +77,7 @@
           </p>
           <p>
             In the next section, I'll give you the basic steps to get up and
-            running with a Github Pages website. I'll also provide some
+            running with a GitHub Pages website. I'll also provide some
             additional sections that may help you expand upon the initial
             "hello, world" example. My goal is to get you on your way with a
             <strong><em>simple</em></strong> and
@@ -91,26 +91,26 @@
         </section>
 
         <section aria-labelledby="section-2-heading">
-          <h2 id="section-2-heading">Creating your Github Pages website</h2>
+          <h2 id="section-2-heading">Creating your GitHub Pages website</h2>
           <ol>
             <li>
               <details>
                 <summary>
-                  <external-link href="https://github.com/new"
-                    >Create a Github repository</external-link
+                  <external-link href="https://GitHub.com/new"
+                    >Create a GitHub repository</external-link
                   >
                   with the following name structure:
-                  <code>&lt;username&gt;.github.io</code>
+                  <code>&lt;username&gt;.GitHub.io</code>
                 </summary>
                 <ul>
                   <li>
-                    It doesn't matter if you create locally and push or create
-                    remotely and clone.
+                    It doesn't matter if you create the repo locally and push or
+                    create it on GitHub and clone.
                   </li>
                   <li>
                     e.g. If my username is "RedPorcupine37" and my profile url
-                    is "https://github.com/RedPorcupine37". Then, my repository
-                    name is "redporcupine37.github.io".
+                    is "https://GitHub.com/RedPorcupine37". Then, my repository
+                    name is "redporcupine37.GitHub.io".
                   </li>
                 </ul>
               </details>
@@ -144,9 +144,9 @@
           <p>
             <strong><em>Congratulations!</em></strong> You now have a live
             webpage at your GitHub Pages domain
-            (<code>&lt;username&gt;.github.io</code>). You can go make any
+            (<code>&lt;username&gt;.GitHub.io</code>). You can go make any
             changes you'd like, push them to the remote repo, and see those
-            changes live in a mater of seconds.
+            changes live in a matter of seconds.
           </p>
           <p>
             The rest of this article contains sections that expand on other
@@ -177,16 +177,15 @@
                   Create a basic CSS framework for theme, styles, and typography
                 </summary>
                 <p>
-                  This will give you a single column layout with a sensible
-                  typography system, and a starting point for a theme. You can
-                  use a tool like
+                  This will give you a single-column layout with sensible
+                  typography and a starting point for a theme. You can use a
+                  tool like
                   <external-link
                     href="https://www.realtimecolors.com/?colors=151d2a-ffffff-2563eb-e8edf2-ddeafb"
                     >Realtime Colors</external-link
                   >
-                  to help explore theme choices. However, I would recommend
-                  building your page first and using it to test changes
-                  directly.
+                  to explore theme choices. However, I recommend building your
+                  page first and testing changes directly.
                 </p>
                 <pre><code>/* Save this as: css/global.css */
 :root {
@@ -341,10 +340,11 @@ pre code {
             style.
           </p>
           <p>
-            You may start to wonder what it looks like on different devices. You
-            can use your browser's devtools to simulate different devices. But
-            before you ship your changes, it's always best to test on a real
-            device.
+            As you experiment, you may start to wonder how your site actually
+            appears on different devices. While browser devtools offer a helpful
+            simulation, seeing your site on a real phone or tablet can reveal
+            issues that simulations don't. Let's look at how you can do that
+            next.
           </p>
         </section>
 
@@ -419,7 +419,7 @@ pre code {
                 <summary>
                   Acquire the
                   <external-link
-                    href="https://gist.github.com/sergejmueller/cf6b4f2133bcb3e2f64a"
+                    href="https://gist.GitHub.com/sergejmueller/cf6b4f2133bcb3e2f64a"
                     ><code>.woff2</code></external-link
                   >
                   file(s) for your desired font
@@ -439,9 +439,8 @@ pre code {
                 <summary>Add the font file(s) to your website repo</summary>
 
                 <p>
-                  Just like with the CSS, you'll want to create a folder for
-                  <code>fonts/</code> and add your <code>.woff2</code> files
-                  directly to that folder. In my example, I'd have:
+                  As with your CSS, create a <code>fonts/</code> folder and add
+                  your <code>.woff2</code> files there. In my example, I'd have:
                 </p>
                 <pre><code>fonts/source-sans-3-v19-latin-regular.woff2</code></pre>
               </details>
@@ -507,15 +506,14 @@ pre code {
 
                 <p>
                   Most registrars provide DNS hosting services, allowing you to
-                  manage your DNS records easily. The trick will be knowning
-                  which records to create. Using Vercel helps us here, all we
-                  need to do is create an <code>ALIAS</code> record that points
-                  our
+                  manage your DNS records easily. The trick is knowing which
+                  records to create. Using Vercel helps, as all we need to do is
+                  create an <code>ALIAS</code> record that points our
                   <external-link
-                    href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages"
+                    href="https://docs.GitHub.com/en/pages/configuring-a-custom-domain-for-your-GitHub-pages-site/about-custom-domains-and-GitHub-pages"
                     >apex domain</external-link
                   >
-                  at our Github Pages domain.
+                  at our GitHub Pages domain.
                 </p>
                 <p>ALIAS record:</p>
                 <ul>
@@ -523,7 +521,7 @@ pre code {
                   <li><strong>Type:</strong> <code>ALIAS</code></li>
                   <li>
                     <strong>Value:</strong>
-                    <code>&lt;username&gt;.github.io</code>
+                    <code>&lt;username&gt;.GitHub.io</code>
                   </li>
                   <li><strong>TTL:</strong> <code>60</code> (default)</li>
                 </ul>
@@ -532,11 +530,11 @@ pre code {
                   points our <code>www</code> subdomain at the same IP as our
                   apex domain. This is
                   <external-link
-                    href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain-and-the-www-subdomain-variant"
+                    href="https://docs.GitHub.com/en/pages/configuring-a-custom-domain-for-your-GitHub-pages-site/managing-a-custom-domain-for-your-GitHub-pages-site#configuring-an-apex-domain-and-the-www-subdomain-variant"
                     >recommended</external-link
                   >
-                  by Github Pages and you'll run into a warning when you do the
-                  DNS check later if you don't add this.
+                  by GitHub Pages. If you don't add this, you'll run into a
+                  warning when you do the DNS check.
                 </p>
                 <p>CNAME record:</p>
                 <ul>
@@ -544,7 +542,7 @@ pre code {
                   <li><strong>Type:</strong> <code>CNAME</code></li>
                   <li>
                     <strong>Value:</strong>
-                    <code>&lt;username&gt;.github.io</code>
+                    <code>&lt;username&gt;.GitHub.io</code>
                   </li>
                   <li><strong>TTL:</strong> <code>60</code> (default)</li>
                 </ul>
@@ -553,23 +551,23 @@ pre code {
             <li>
               <details>
                 <summary>
-                  Enter your new domain in your Github repo settings and do a
+                  Enter your new domain in your GitHub repo settings and do a
                   DNS check
                 </summary>
 
                 <ol>
-                  <li>Go to your Github repo "Settings" tab</li>
+                  <li>Go to your GitHub repo "Settings" tab</li>
                   <li>Go to the "Pages" section of you settings</li>
                   <li>
                     Under "Custom domain", enter your new domain and click
                     "Save"
                   </li>
-                  <li>Github will do a DNS check to verify your DNS records</li>
+                  <li>GitHub will do a DNS check to verify your DNS records</li>
                 </ol>
 
                 <p>
-                  Allow the DNS records to propogate (~60s). Visit your custom
-                  domain and you can now see your Github Pages website!
+                  Allow the DNS records to propagate (~60s). Visit your custom
+                  domain to see your GitHub Pages website live!
                 </p>
               </details>
             </li>
