@@ -75,7 +75,7 @@ pre code {
 
 @media (min-width: 1024px) {
   body {
-    max-width: 75ch;
+    max-width: 70ch;
     padding: 0;
     margin-bottom: 50vh;
   }
